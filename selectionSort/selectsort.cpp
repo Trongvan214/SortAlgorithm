@@ -45,6 +45,7 @@ void selectionSort(int list[], int last, int* count)
         {
             //1 operation done 
             (*count)+=1;
+            
             //if walker value is less than curr smallest value
             if(list[walker] < list[smallest])
             {

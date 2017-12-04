@@ -4,9 +4,9 @@
 #include <cstdlib>
 
 using namespace std; 
-
+int count2 = 0;
 //prototypes
-void quickSort(int list[], int left, int right);
+void quickSort(int list[], int left, int right, int* count);
 void exchange(int list[],int i, int j);
 int partition(int list[], int left, int right);
 
@@ -14,21 +14,28 @@ int main()
 {
     //ramdom seed generator 
     srand(time(0));
-    const int ARRSIZE = 1000;
+    const int ARRSIZE = 20;
     int arr[ARRSIZE];
+    int count = 0;
     //put in randoms numbers
     for(int i=0;i<ARRSIZE;i++)
     {
-        arr[i] = rand()%10000;
+        arr[i] = rand()%100;
     }
-    quickSort(arr,0,ARRSIZE);
+    quickSort(arr,0,ARRSIZE,&count);
     for(int j=0;j<ARRSIZE;j++)
     {
         cout << arr[j] << endl;
     }
+    cout << endl;
+    cout << "count" << count << endl;
+    cout << "count2 " << count2 << endl;
 }
-void quickSort(int list[], int left, int right)
+void quickSort(int list[], int left, int right, int* count)
 {
+    (*count)+1;
+    count2+=1;
+    cout << "ca" << count << endl;
     //jump out of the void function (mean this part is sorted)
     if(left >= right)
     {
@@ -36,9 +43,11 @@ void quickSort(int list[], int left, int right)
     }
     int arrPart = partition(list,left,right);
     //arrPart-1 cause the return value is the middle and sorted
-    quickSort(list,left,arrPart-1);
+    cout << "ca" << count << endl;
+    quickSort(list,left,arrPart-1,count);
     //arrpart+1 for the same reason
-    quickSort(list,arrPart+1,right);
+    cout << "ca" << count << endl;
+    quickSort(list,arrPart+1,right,count);
     
 }
 //function that move arround a small piece of the list
@@ -50,7 +59,8 @@ int partition(int list[], int left, int right) {
     //left+1 cause pivot is at index 0
     int i = left + 1;
     int j = right;
-    while (i <= j) {
+    while (i <= j) 
+    {
         //left find value that's greater
         while(i <= j && list[i] <= pivot) {
             i++;
