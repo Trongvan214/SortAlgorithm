@@ -2,19 +2,19 @@
 #include <ctime>
 #include <cstdlib>
 
-#include "binary_tree.hpp"
+#include "bst.hpp"
 
 using namespace std; 
 
 int main()
 {
     srand(time(0));
-    Binary_tree BTS;
+    BTS t;
     for(int i=0;i<50;i++)
     {
         int num = rand()%500;
-        BTS.add_leaf(num);
+        t.add_leaf(num);
     }
-    BTS.print_in_order();
+    t.print_in_order();
     return 0;
 }
