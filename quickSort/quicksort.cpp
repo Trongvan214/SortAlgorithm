@@ -33,7 +33,9 @@ int main()
 }
 void quickSort(int list[], int left, int right, int* count)
 {
+    //this got way off value
     (*count)+1;
+    //global works
     count2+=1;
     cout << "ca" << count << endl;
     //jump out of the void function (mean this part is sorted)

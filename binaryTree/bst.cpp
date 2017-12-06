@@ -1,15 +1,40 @@
 /*              Binary Search Tree Pseudo Code
- * Constructor function: Binary_search
+ * Constructor function: BTS
  * input: none
  * output: none
  * return: none
- * functionality: make the array and set the value
+ * functionality: set root to null
  * 
- * function name: Search 
- * input: target value to search
- * output: where the value given is at or not found
+ * function name: create_leaf 
+ * input: key
+ * output: none
  * return: none
- * functionality: binary search the given value and print where its located*/
+ * functionality: create a leaf with the key = given key
+ * 
+ * function name: add_leaf_priv
+ * input: key, ptr
+ * output: none
+ * return none
+ * functionlity: create a leaf and attach it in the right place
+ * 
+ * function name: add_leaf
+ * input: key
+ * output: none
+ * return: none
+ * functionlity: call add_leaf_priv and pass in root and key to priv add_leaf
+ * 
+ * function name: print_in_order_priv
+ * input: ptr
+ * output: the data in order from least to greatest
+ * return: none
+ * functionlity: traverse (in order) and cout all the values
+ * 
+ * function name: print_in_order
+ * input: none;
+ * output: none
+ * return: none
+ * functionlity: a public function to call and this call priv function with 
+ * root pass in (so people don't have access to root*/
 
 #include <iostream>
 #include "bst.hpp" 
