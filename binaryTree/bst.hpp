@@ -7,16 +7,18 @@ using namespace std;
 
 class BTS {
     //variables
+    int count;
     Node* root;
     //private memeber functions
-    Node* create_leaf(int key);
-    void add_leaf_priv(int key, Node* ptr);
+    Node* create_leaf(data key);
+    void add_leaf_priv(data key, Node* ptr);
     void print_in_order_priv(Node* ptr);
     //public member functions
     public:
         BTS();
-        void add_leaf(int key);
+        void add_leaf(data key);
         void print_in_order();
+        int return_count();
         
 };
 #endif

@@ -47,21 +47,24 @@ BTS::BTS()
     root = NULL;
 }
 //create leaf help prevent new dynamic menory everytime in recursive function
-Node* BTS::create_leaf(int key)
+Node* BTS::create_leaf(data key)
 {
     return new Node(key);
 }
 //public add leaf so they can't get access to root 
-void BTS::add_leaf(int key)
+void BTS::add_leaf(data key)
 {
     add_leaf_priv(key,root);
 }
 //take a given key and add it to the tree
-void BTS::add_leaf_priv(int key, Node* ptr)
+void BTS::add_leaf_priv(data key, Node* ptr)
 {
     //if no node in the tree case
     if(root == NULL)
     {
+        //count operation
+        count+=1;
+        
         root = create_leaf(key);
     }
     //if key is less than ptr
@@ -125,4 +128,9 @@ void BTS::print_in_order_priv(Node* ptr)
         cout << "The tree is empty" << endl;
     }
 }
+ int BTS::return_count()
+ {
+     return count;
+ }
+
 
