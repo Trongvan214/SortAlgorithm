@@ -56,6 +56,8 @@ int main()
     sortGen(sorted,SIZE2);
     //write object
     cout << "Prepare to wait, it take a while" << endl;
+    cout << "YOU CAN MODIFY THE SIZE (LINE 46)" << endl;
+    cout << "ctr+c to quit current" << endl;
     ofstream write;
     
 /*----write to quicksort-----*/

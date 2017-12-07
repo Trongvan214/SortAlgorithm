@@ -130,7 +130,7 @@ void BST::print_in_order_priv(Node* ptr, ostream& stream)
         {
             print_in_order_priv(ptr->return_left(),stream);
         }
-        stream << ptr->return_key() << " ";
+        stream << ptr->return_key() << " " << ptr->return_item().s << endl;
         if(ptr->return_right() != NULL)
         {
             print_in_order_priv(ptr->return_right(),stream);
