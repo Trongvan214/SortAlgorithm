@@ -55,6 +55,7 @@ int main()
     //generate a sort array
     sortGen(sorted,SIZE2);
     //write object
+    cout << "Prepare to wait, it take a while" << endl;
     ofstream write;
     
 /*----write to quicksort-----*/
