@@ -1,11 +1,14 @@
+#include <iostream>
 #include "insertion.hpp"
 
 using namespace std;
 
-Insertion::Insertion(data list[], int size)
+Insertion::Insertion(data list[], int given_size)
 {
+    size = given_size;
     count = 0;
-    sort(list,size);
+    item = list;
+    sort(item,size);
 }
 void Insertion::sort(data list[], int size)
 {
@@ -25,6 +28,16 @@ void Insertion::sort(data list[], int size)
        list[walker + 1].key = hold;
 	   count+=1;
    }
+}
+
+//print the list out 
+void Insertion::print(ostream& stream)
+{
+    for(int i=0;i<size;i++)
+    {
+        stream << item[i].key << " " << item[i].s << endl;
+    }
+    cout << endl;
 }
 //return the count 
 int Insertion::return_count()

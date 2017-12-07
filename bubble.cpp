@@ -5,9 +5,12 @@ using namespace std;
 
 void exchange2(data list[],int i,int j);
 
-Bubble::Bubble(data list[], int size)
+Bubble::Bubble(data list[], int given_size)
 {
-    sort(list,size);
+    count = 0;
+    size = given_size;
+    item = list;
+    sort(item,size);
 }
 
 void Bubble::sort(data list[], int size)
@@ -30,6 +33,17 @@ void Bubble::sort(data list[], int size)
         }
     }
 }
+
+//print the list out 
+void Bubble::print(ostream& stream)
+{
+    for(int i=0;i<size;i++)
+    {
+        stream << item[i].key << " " << item[i].s << endl;
+    }
+    cout << endl;
+}
+
 //return the count 
 int Bubble::return_count()
 {

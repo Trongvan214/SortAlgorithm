@@ -42,23 +42,33 @@
 using namespace std;
 
 //default constructor 
-BTS::BTS() 
+BST::BST() 
 {
     count = 0;
     root = NULL;
 }
+//automatic add all nodes
+BST::BST(data list[], int given_size) 
+{
+    count = 0;
+    root = NULL;
+    for(int i=0;i<given_size;i++)
+    {
+        add_leaf(list[i]);
+    }
+}
 //create leaf help prevent new dynamic menory everytime in recursive function
-Node* BTS::create_leaf(data item)
+Node* BST::create_leaf(data item)
 {
     return new Node(item);
 }
 //public add leaf so they can't get access to root 
-void BTS::add_leaf(data item)
+void BST::add_leaf(data item)
 {
     add_leaf_priv(item,root);
 }
 //take a given key and add it to the tree
-void BTS::add_leaf_priv(data item, Node* ptr)
+void BST::add_leaf_priv(data item, Node* ptr)
 {
     //if no node in the tree case
     if(root == NULL)
@@ -107,23 +117,23 @@ void BTS::add_leaf_priv(data item, Node* ptr)
     //else mean node in tree already
 }
 //call the print in order priv and past in root as ptr
-void BTS::print_in_order()
+void BST::print_in_order(ostream& stream)
 {
-    print_in_order_priv(root);
+    print_in_order_priv(root,stream);
 }
 //function that print the tree in order from left to right
-void BTS::print_in_order_priv(Node* ptr)
+void BST::print_in_order_priv(Node* ptr, ostream& stream)
 {
     if(root != NULL)
     {
         if(ptr->return_left() != NULL)
         {
-            print_in_order_priv(ptr->return_left());
+            print_in_order_priv(ptr->return_left(),stream);
         }
-        cout << ptr->return_key() << " ";
+        stream << ptr->return_key() << " ";
         if(ptr->return_right() != NULL)
         {
-            print_in_order_priv(ptr->return_right());
+            print_in_order_priv(ptr->return_right(),stream);
         }
     }
     else 
@@ -131,7 +141,7 @@ void BTS::print_in_order_priv(Node* ptr)
         cout << "The tree is empty" << endl;
     }
 }
- int BTS::return_count()
+ int BST::return_count()
  {
      return count;
  }

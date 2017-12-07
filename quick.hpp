@@ -8,10 +8,9 @@ class Quick
     //count the number of operation
     int count, size;
     data* item;
-    void sortPriv(data list[], int left, int right);
+    void sort(data list[], int left, int right);
     public: 
         Quick(data list[], int given_size);
-        void sort();
         int return_count();
         void print(ostream& stream);
 };

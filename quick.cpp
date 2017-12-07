@@ -12,12 +12,9 @@ Quick::Quick(data list[], int given_size)
     count = 0;
     item = list;
     size = given_size;
+    sort(list,0,size-1);
 }
-void Quick::sort()
-{
-    sortPriv(item,0,size-1);
-}
-void Quick::sortPriv(data list[], int left, int right)
+void Quick::sort(data list[], int left, int right)
 {
     count+=1;
     //jump out of the void function (mean this part is sorted)
@@ -27,21 +24,21 @@ void Quick::sortPriv(data list[], int left, int right)
     }
     int arrPart = partition(list,left,right);
     //arrPart-1 cause the return value is the middle and sorted
-    sortPriv(list,left,arrPart-1);
+    sort(list,left,arrPart-1);
     //arrpart+1 for the same reason
-    sortPriv(list,arrPart+1,right);
+    sort(list,arrPart+1,right);
 }
 //return count
 int Quick::return_count()
 {
     return count;
 }
-
+//print the list out 
 void Quick::print(ostream& stream)
 {
     for(int i=0;i<size;i++)
     {
-        stream << item[i].key << " ";
+        stream << item[i].key << " " << item[i].s << endl;
     }
     cout << endl;
 }

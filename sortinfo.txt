@@ -1,0 +1,64 @@
+Infomation for size 50
+Big – O cal selection sort O(n^2): 2500
+Big – O cal insert sort O(n^2): 2500
+Big – O cal bubble sort: O(n^2): 2500
+Big – O cal quick sort O(n*log(n): 84
+Big – O cal shell sort O(n^1.25): 132
+Big – O cal bst O(n): 50
+
+Selection sort operations (unsorted): 1225
+Straight insertion sort operations (unsorted): 98
+Bubble sort operations (unsorted): 2450
+Quick sort operations (unsorted): 65
+Shell sort operations (unsorted): 203
+Binary search tree operations (unsorted): 40
+----------------------------------------------------
+
+Infomation for size 5000
+Big – O cal selection sort O(n^2): 25000000
+Big – O cal insert sort O(n^2): 25000000
+Big – O cal bubble sort: O(n^2): 25000000
+Big – O cal quick sort O(n*log(n): 18494
+Big – O cal shell sort O(n^1.25): 42044
+Big – O cal bst O(n): 5000
+
+Selection sort operations (unsorted): 12497500
+Straight insertion sort operations (unsorted): 9998
+Bubble sort operations (unsorted): 24995000
+Quick sort operations (unsorted): 6655
+Shell sort operations (unsorted): 55005
+Binary search tree operations (unsorted): 3878
+----------------------------------------------------
+
+Infomation for size 100000
+Big – O cal selection sort O(n^2): 1410065408
+Big – O cal insert sort O(n^2): 1410065408
+Big – O cal bubble sort: O(n^2): 1410065408
+Big – O cal quick sort O(n*log(n): 500000
+Big – O cal shell sort O(n^1.25): 1778279
+Big – O cal bst O(n): 100000
+
+Selection sort operations (unsorted): 704982704
+Straight insertion sort operations (unsorted): 199998
+Bubble sort operations (unsorted): 1409965408
+Quick sort operations (unsorted): 133707
+Shell sort operations (unsorted): 1500006
+Binary search tree operations (unsorted): 78816
+----------------------------------------------------
+
+Infomation for size 5000
+Big – O cal selection sort O(n^2): 25000000
+Big – O cal insert sort O(n^2): 25000000
+Big – O cal bubble sort: O(n^2): 25000000
+Big – O cal quick sort O(n*log(n): 18494
+Big – O cal shell sort O(n^1.25): 42044
+Big – O cal bst O(n): 5000
+
+Selection sort operations (sorted): 12497500
+Straight insertion sort operations (sorted): 9998
+Bubble sort operations (sorted): 24995000
+Quick sort operations (sorted): 5905
+Shell sort operations (sorted): 55005
+Binary search tree operations (sorted): 5000
+----------------------------------------------------
+
