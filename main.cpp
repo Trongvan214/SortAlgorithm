@@ -1,3 +1,21 @@
+/*Name: 	Trong Van
+*ID:        X454V285
+* 
+*Name: 	    Mohammad Alhaj
+*ID: 	    K362J964
+* 
+* Project: #2
+* 
+* Description: This project is about creating different sorting algorithm and 
+*               testing them out and different array sizes and cases to see 
+*               which is the fastest smallest and just analyzes how it work
+* 
+* ------------------Program Start--------------------------
+*               declare the data and generate them
+*               testing them on all the sorts 
+*               collect their data and sent it to the correct files
+*               write an analyzes on what you see
+**/
 #include <iostream>	 
 #include <cstring>
 #include <ctime>
@@ -24,14 +42,17 @@ using namespace std;
 int main()            
 {
     srand(time(0));
+    //declare the array and sizes
     const int SIZE1 = 50, SIZE2 = 5000, SIZE3 = 100000;
     data arr1[SIZE1];
     data arr2[SIZE2];
     data arr3[SIZE3];
     data sorted[SIZE2];
+    //generate randoms number for all the array
     randomGen(arr1,SIZE1);
     randomGen(arr2,SIZE2);
     randomGen(arr3,SIZE3);
+    //generate a sort array
     sortGen(sorted,SIZE2);
     //write object
     ofstream write;
@@ -237,7 +258,7 @@ void sortGen(data list[], int SIZE)
         list[i].s = s[i%5];
     }
 }
-
+//write to the sortinfo.txt
 void writeSortInfo(int s, int b, int q, int ss, int i,
                     int bb, int SIZE, ostream& write, bool isOrder)
 {
@@ -255,6 +276,7 @@ void writeSortInfo(int s, int b, int q, int ss, int i,
     write << "Big – O cal shell sort O(n^1.25): " << sll << endl;
     write << "Big – O cal bst O(n): " << bts << endl;
     write << endl;
+    //it's the sorted data pass in this use format
     if(isOrder)
     {
         write << "Selection sort operations (sorted): " << s << endl;
@@ -284,7 +306,7 @@ void writeAnalyze()
     write << "My thought on all the sorts is that bubble is the worst when\n";
     write << "it comes to almost all the different cases. In term of which\n";
     write << "perform the fastest it's certainly quicksort. It dominated\n";
-    write << "most cases, but couldn't beat insertion on sort array.\n";
+    write << "most cases, but couldn't beat insertion on sorted array.\n";
     write << "Bubble is good when it comes to small sizes and easy to make.\n";
     write << "Overall, all the sorts were very interesting in terms of the\n";
     write <<"logic behind it. I think personally quick and shell is the best\n";  

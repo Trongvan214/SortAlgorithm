@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include "quick.hpp"
 
@@ -7,6 +6,7 @@ using namespace std;
 int partition(data list[], int left, int right);
 void exchange3(data list[],int i,int j);
 
+//pass in array and size and sort it right away
 Quick::Quick(data list[], int given_size)
 {
     count = 0;
@@ -14,6 +14,7 @@ Quick::Quick(data list[], int given_size)
     size = given_size;
     sort(list,0,size-1);
 }
+//sort function that sort the array
 void Quick::sort(data list[], int left, int right)
 {
     count+=1;

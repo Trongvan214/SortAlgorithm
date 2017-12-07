@@ -1,9 +1,8 @@
 #ifndef __DATA__
 #define __DATA__
 
-#include <string> 	   //this lets us use the string variable
+#include <string> 	  
 using namespace std;
-
 struct data
 {
 	int key;
