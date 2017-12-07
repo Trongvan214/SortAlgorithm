@@ -10,13 +10,4 @@ struct data
 	string s;
 };
 
-//swamp the values at the given array locations
-//share with all sort
-void exchange(data list[],int i,int j)
-{
-    data temp = list[i];
-    list[i] = list[j];
-    list[j] = temp;
-}
-
 #endif 
