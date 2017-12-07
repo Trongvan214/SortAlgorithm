@@ -1,7 +1,0 @@
-My thought on all the sorts is that bubble is the worst when
-it comes to almost all the different cases. In term of which
-perform the fastest it's certainly quicksort. It dominated
-most cases, but couldn't beat insertion on sort array.
-Bubble is good when it comes to small sizes and easy to make.
-Overall, all the sorts were very interesting in terms of the
-logic behind it. I think personally quick and shell is the best
